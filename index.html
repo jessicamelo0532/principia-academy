@@ -5,57 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principia Academy | Física e Matemática Online</title>
+    <meta name="description" content="Aulas online de Física e Matemática: reforço escolar, intensivo para o ENEM e vestibulares e mentoria individual, com turmas reduzidas.">
+    <meta name="theme-color" content="#8B0000">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Principia Academy | Física e Matemática Online">
+    <meta property="og:description" content="Reforço escolar, intensivo para o ENEM e mentoria individual em Física e Matemática, 100% online.">
+    <meta property="og:url" content="https://www.principiacademy.com.br/">
+    <meta property="og:image" content="https://www.principiacademy.com.br/assets/maca.png">
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/maca.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
 
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
     <header class="navbar">
-        <div class="logo">
-            <div class="logo-icon">🍎</div>
-            <div class="logo-text">Principia <span>Academy</span></div>
-        </div>
-        <nav>
+        <a href="#home" class="logo" aria-label="Principia Academy, voltar ao início">
+            <span class="logo-icon" aria-hidden="true">🍎</span>
+            <span class="logo-text">Principia <span>Academy</span></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="menu-principal" aria-label="Menu principal">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#cursos">Cursos</a></li>
                 <li><a href="#metodologia">Metodologia</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#contato" class="btn-cta-header">QUERO MINHA VAGA</a></li>
+                <li><a href="#contato" class="btn-cta-header">Quero minha vaga</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
         <section id="home" class="hero-template">
-            <div class="fundo-envelhecido"></div>
-            <div class="corte-vermelho-organico"></div>
+            <div class="corte-vermelho-organico" aria-hidden="true"></div>
 
             <div class="hero-container-template">
                 <div class="hero-text">
-                    <span class="badge">AULAS 100% ONLINE</span>
+                    <span class="badge">Aulas 100% online</span>
                     <h1>
-                        <span class="sombra-frase-1">Domine a Física e a Matemática.</span><br>
-                        <span class="highlight sombra-frase-2">Conquiste sua aprovação.</span>
+                        Domine a Física e a Matemática.
+                        <span class="highlight">Conquiste sua aprovação.</span>
                     </h1>
                     <p>Com o método certo, qualquer aluno pode aprender ciências exatas. Reforço escolar e preparação
                         intensiva para o ENEM com professores especializados.</p>
                     <div class="hero-actions">
-                        <a href="#contato" class="btn-primary">INSCREVA-SE</a>
-                        <a href="#cursos" class="btn-secondary">Ver Cursos</a>
+                        <a href="#contato" class="btn-primary">Inscreva-se</a>
+                        <a href="#cursos" class="btn-secondary">Ver cursos</a>
                     </div>
                 </div>
                 <div class="hero-visual-template">
-                    <img src="./assets/maca.png" alt="Maçã Principia" class="maca-flutuante">
+                    <img src="./assets/maca.png" alt="Maçã com traçados geométricos dourados, símbolo da Principia Academy"
+                        class="maca-flutuante" width="500" height="500">
                 </div>
             </div>
 
-            <div class="wave-container">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
+            <div class="wave-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path
                         d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
                         class="wave-path"></path>
@@ -65,125 +87,124 @@
 
         <section id="cursos" class="courses">
             <div class="section-header">
-                <span class="badge-dark">Nossos Cursos</span>
+                <span class="badge-dark">Nossos cursos</span>
                 <h2>Escolha o curso ideal para você</h2>
                 <p>Metodologia exclusiva focada em aprendizado real e resultados imediatos.</p>
             </div>
 
             <div class="grid-container">
-                <div class="course-card">
+                <article class="course-card">
                     <div class="card-icon"><i data-lucide="calculator"></i></div>
                     <h3>Reforço Escolar</h3>
-                    <h4 class="card-subtitle">Ensino Fundamental e Médio</h4>
+                    <p class="card-subtitle">Ensino Fundamental e Médio</p>
                     <p>Acompanhamento personalizado para alunos que precisam reforçar conteúdos de Física e Matemática
                         do ensino básico.</p>
                     <ul class="card-features">
                         <li><i data-lucide="check"></i> Material exclusivo</li>
                         <li><i data-lucide="check"></i> Plantão de dúvidas</li>
                     </ul>
-                    <a href="#contato" class="btn-card">INSCREVA-SE</a>
-                </div>
+                    <a href="#contato" class="btn-card" data-curso="reforco">Inscreva-se</a>
+                </article>
 
-                <div class="course-card featured">
-                    <div class="card-tag">Mais Procurado</div>
+                <article class="course-card featured">
+                    <span class="card-tag">Mais procurado</span>
                     <div class="card-icon"><i data-lucide="book-open"></i></div>
                     <h3>Intensivo Pré-Vestibular</h3>
-                    <h4>ENEM e Vestibulares</h4>
-                    <p>Curso intensivo com foco total nas provas do ENEM e principais vestibulares. <br> Resolução de
+                    <p class="card-subtitle">ENEM e Vestibulares</p>
+                    <p>Curso intensivo com foco total nas provas do ENEM e principais vestibulares. Resolução de
                         provas anteriores, simulados e acompanhamento personalizado.</p>
                     <ul class="card-features">
-                        <li><i data-lucide="check"></i> Cronograma Completo</li>
+                        <li><i data-lucide="check"></i> Cronograma completo</li>
                         <li><i data-lucide="check"></i> Foco na Teoria de Resposta ao Item (TRI)</li>
                     </ul>
-                    <a href="#contato" class="btn-primary-card">INSCREVA-SE</a>
-                </div>
+                    <a href="#contato" class="btn-primary-card" data-curso="enem">Inscreva-se</a>
+                </article>
 
-                <div class="course-card">
+                <article class="course-card">
                     <div class="card-icon"><i data-lucide="target"></i></div>
                     <h3>Mentoria Individual</h3>
-                    <h4>Acompanhamento de carreira</h4>
-                    <p>Para quem não quer apenas estudar, mas saber como estudar.Acompanhamos sua evolução semanalmente.
-                    </p>
+                    <p class="card-subtitle">Acompanhamento de carreira</p>
+                    <p>Para quem não quer apenas estudar, mas saber como estudar. Acompanhamos sua evolução
+                        semanalmente.</p>
                     <ul class="card-features">
-                        <li><i data-lucide="check"></i>Cronograma 100% Personalizado</li>
-                        <li><i data-lucide="check"></i>Análise de Desempenho Individual</li>
+                        <li><i data-lucide="check"></i> Cronograma 100% personalizado</li>
+                        <li><i data-lucide="check"></i> Análise de desempenho individual</li>
                     </ul>
-                    <a href="#contato" class="btn-card">INSCREVA-SE</a>
-                </div>
+                    <a href="#contato" class="btn-card" data-curso="mentoria">Inscreva-se</a>
+                </article>
             </div>
         </section>
 
         <section id="metodologia" class="method">
             <div class="section-header-light">
-                <span class="badge-method">Nossa Metodologia</span>
+                <span class="badge-method">Nossa metodologia</span>
                 <h2>O método que transforma alunos em aprovados</h2>
                 <p>Uma abordagem pedagógica estruturada, pensada para quem quer resultados concretos em exatas.</p>
             </div>
 
-            <div class="method-grid">
-                <div class="method-card">
-                    <div class="method-icon">🔍</div>
-                    <span class="step-tag">PASSO 01</span>
+            <ol class="method-grid">
+                <li class="method-card">
+                    <div class="method-icon" aria-hidden="true">🔍</div>
+                    <span class="step-tag">Passo 01</span>
                     <h3>Diagnóstico Inicial</h3>
                     <p>Avaliação detalhada do nível atual do aluno para identificar lacunas de conhecimento e definir o
                         plano de estudo personalizado.</p>
-                </div>
+                </li>
 
-                <div class="method-card">
-                    <div class="method-icon">📐</div>
-                    <span class="step-tag">PASSO 02</span>
+                <li class="method-card">
+                    <div class="method-icon" aria-hidden="true">📐</div>
+                    <span class="step-tag">Passo 02</span>
                     <h3>Fundamentos Sólidos</h3>
-                    <p>Construção da base conceitual com linguagem acessível. Entender o "porquê" antes do "como" — a
+                    <p>Construção da base conceitual com linguagem acessível. Entender o "porquê" antes do "como" é a
                         chave para dominar exatas.</p>
-                </div>
+                </li>
 
-                <div class="method-card">
-                    <div class="method-icon">💡</div>
-                    <span class="step-tag">PASSO 03</span>
+                <li class="method-card">
+                    <div class="method-icon" aria-hidden="true">💡</div>
+                    <span class="step-tag">Passo 03</span>
                     <h3>Prática Orientada</h3>
                     <p>Resolução de exercícios progressivos com feedback imediato. Cada erro é uma oportunidade de
                         aprendizado real.</p>
-                </div>
+                </li>
 
-                <div class="method-card">
-                    <div class="method-icon">🚀</div>
-                    <span class="step-tag">PASSO 04</span>
+                <li class="method-card">
+                    <div class="method-icon" aria-hidden="true">🚀</div>
+                    <span class="step-tag">Passo 04</span>
                     <h3>Simulados e Revisão</h3>
                     <p>Provas no estilo ENEM e vestibulares com análise de desempenho. Estratégia de prova e
                         gerenciamento de tempo.</p>
-                </div>
-            </div>
+                </li>
+            </ol>
 
             <div class="online-features">
-                <h2 class="online-title">Diferenciais do Curso</h2>
+                <h2 class="online-title">Diferenciais do curso</h2>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="feature-icon">💻</div>
+                        <div class="feature-icon" aria-hidden="true">💻</div>
                         <div class="feature-text">
-                            <h4>Aulas ao Vivo Online</h4>
+                            <h3>Aulas ao vivo online</h3>
                             <p>Interação em tempo real com professores via plataforma digital. Tire dúvidas no momento
                                 em que surgem.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">🎥</div>
+                        <div class="feature-icon" aria-hidden="true">🎥</div>
                         <div class="feature-text">
-                            <h4>Gravações Disponíveis</h4>
-                            <p>Todas as aulas ficam gravadas para revisão. Estude no seu ritmo, quando e onde quiser.
-                            </p>
+                            <h3>Gravações disponíveis</h3>
+                            <p>Todas as aulas ficam gravadas para revisão. Estude no seu ritmo, quando e onde quiser.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">📊</div>
+                        <div class="feature-icon" aria-hidden="true">📊</div>
                         <div class="feature-text">
-                            <h4>Monitoramento de Progresso</h4>
+                            <h3>Monitoramento de progresso</h3>
                             <p>Dashboard com evolução detalhada, taxa de acerto e pontos de melhoria em tempo real.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">👥</div>
+                        <div class="feature-icon" aria-hidden="true">👥</div>
                         <div class="feature-text">
-                            <h4>Turmas Reduzidas</h4>
+                            <h3>Turmas reduzidas</h3>
                             <p>Máximo de 10 alunos por turma para garantir atenção individualizada e qualidade
                                 pedagógica.</p>
                         </div>
@@ -194,66 +215,65 @@
 
         <section id="sobre" class="about">
             <div class="about-container">
-
                 <div class="about-main-content">
                     <div class="about-text-side">
-                        <span class="badge-history">SOBRE NÓS</span>
+                        <span class="badge-history">Sobre nós</span>
                         <h2>Nascemos do amor pela ciência e pelo ensino</h2>
                         <p>A <strong>Principia Academy</strong> foi fundada com uma missão simples: provar que qualquer
                             aluno pode dominar Física e Matemática com o método certo. O nome é uma homenagem ao
-                            <em>Principia Mathematica</em> de Isaac Newton — a obra que revolucionou a ciência moderna.
+                            <em>Principia Mathematica</em> de Isaac Newton, a obra que revolucionou a ciência moderna.
                         </p>
                         <p>O formato de aulas 100% online nos permitiu alcançar alunos em todo o Brasil sem perder a
                             qualidade e a proximidade que nos tornaram referência.</p>
 
-                        <div class="about-quote-box">
+                        <figure class="about-quote-box">
                             <blockquote>"Se você quer entender o universo, você precisa entender a linguagem em que ele
                                 foi escrito: a matemática."</blockquote>
-                            <cite>— Galileu Galilei</cite>
-                        </div>
+                            <figcaption>Galileu Galilei</figcaption>
+                        </figure>
                     </div>
 
                     <div class="about-cards-side">
                         <div class="mini-card">
-                            <div class="mini-card-icon">🎯</div>
-                            <h4>Foco em Resultados</h4>
+                            <div class="mini-card-icon" aria-hidden="true">🎯</div>
+                            <h3>Foco em resultados</h3>
                             <p>Cada aluno tem uma meta clara. Trabalhamos orientados por dados e progresso real.</p>
                         </div>
                         <div class="mini-card">
-                            <div class="mini-card-icon">❤️</div>
-                            <h4>Paixão pelo Ensino</h4>
+                            <div class="mini-card-icon" aria-hidden="true">❤️</div>
+                            <h3>Paixão pelo ensino</h3>
                             <p>Professores que amam exatas e transmitem esse entusiasmo em cada aula.</p>
                         </div>
                         <div class="mini-card">
-                            <div class="mini-card-icon">🔬</div>
-                            <h4>Rigor Científico</h4>
+                            <div class="mini-card-icon" aria-hidden="true">🔬</div>
+                            <h3>Rigor científico</h3>
                             <p>Ensino baseado em evidências pedagógicas e metodologia comprovada.</p>
                         </div>
                         <div class="mini-card">
-                            <div class="mini-card-icon">🤝</div>
-                            <h4>Compromisso com o Aluno</h4>
+                            <div class="mini-card-icon" aria-hidden="true">🤝</div>
+                            <h3>Compromisso com o aluno</h3>
                             <p>Suporte contínuo e acompanhamento até a aprovação.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="team-section">
-                    <h2 class="team-title">Nossa Equipe</h2>
+                    <h2 class="team-title">Nossa equipe</h2>
                     <div class="team-grid">
                         <div class="team-member">
-                            <div class="member-photo-wrapper">
-                                <div class="member-initial">J</div>
+                            <div class="member-photo-wrapper" aria-hidden="true">
+                                <span class="member-initial">J</span>
                             </div>
-                            <h4>José Paulo</h4>
-                            <p> Bacharel em Física pela UFPA <p>
-<p>Mestrando em Física <br>UFPA</p>
+                            <h3>José Paulo</h3>
+                            <p>Bacharel em Física pela UFPA</p>
+                            <p>Mestrando em Física pela UFPA</p>
                         </div>
                         <div class="team-member">
-                            <div class="member-photo-wrapper">
-                                <div class="member-initial">F</div>
+                            <div class="member-photo-wrapper" aria-hidden="true">
+                                <span class="member-initial">F</span>
                             </div>
-                            <h4>Fulano Silva</h4>
-                            <p>Física — UFPA</p>
+                            <h3>Fulano Silva</h3>
+                            <p>Física pela UFPA</p>
                         </div>
                     </div>
                 </div>
@@ -262,32 +282,33 @@
 
         <section id="contato" class="contact">
             <div class="contact-header">
-                <span class="badge-contact">CONTATO</span>
+                <span class="badge-contact">Contato</span>
                 <h2>Pronto para começar sua jornada?</h2>
-                <p>Preencha o formulário e entraremos em contato tirar todas as suas dúvidas.</p>
+                <p>Preencha o formulário e a mensagem segue direto para o nosso WhatsApp. Respondemos para tirar todas
+                    as suas dúvidas.</p>
             </div>
 
             <div class="contact-container">
-                <form class="contact-form">
+                <form class="contact-form" id="form-contato" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>NOME COMPLETO *</label>
-                            <input type="text" placeholder="Seu nome" required>
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
                         </div>
                         <div class="form-group">
-                            <label>E-MAIL *</label>
-                            <input type="email" placeholder="seu@email.com" required>
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>TELEFONE / WHATSAPP</label>
-                            <input type="tel" placeholder="(91) 9 0000-0000">
+                            <label for="telefone">Telefone / WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(91) 9 0000-0000" autocomplete="tel" inputmode="tel">
                         </div>
                         <div class="form-group">
-                            <label>INTERESSE *</label>
-                            <select required>
+                            <label for="interesse">Interesse *</label>
+                            <select id="interesse" name="interesse" required>
                                 <option value="" disabled selected>Selecione um curso</option>
                                 <option value="reforco">Reforço Escolar</option>
                                 <option value="enem">Intensivo Pré-Vestibular</option>
@@ -297,50 +318,51 @@
                     </div>
 
                     <div class="form-group">
-                        <label>MENSAGEM</label>
-                        <textarea rows="5" placeholder="Conte-nos um pouco sobre seus objetivos..."></textarea>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos um pouco sobre seus objetivos..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">ENVIAR MENSAGEM</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                    <button type="submit" class="btn-submit">Enviar mensagem</button>
                 </form>
 
                 <div class="contact-info-side">
                     <h3>Outras formas de contato</h3>
 
-                    <div class="info-item">
-                        <div class="info-icon">📧</div>
-                        <div class="info-text">
+                    <a class="info-item" href="mailto:contato@principiaacademy.com">
+                        <span class="info-icon" aria-hidden="true">📧</span>
+                        <span class="info-text">
                             <span>E-mail</span>
-                            <p>contato@principiaacademy.com</p>
-                        </div>
-                    </div>
+                            <strong>contato@principiaacademy.com</strong>
+                        </span>
+                    </a>
 
-                    <div class="info-item">
-                        <div class="info-icon">📱</div>
-                        <div class="info-text">
+                    <a class="info-item" href="https://wa.me/5591999999999" target="_blank" rel="noopener">
+                        <span class="info-icon" aria-hidden="true">📱</span>
+                        <span class="info-text">
                             <span>WhatsApp</span>
-                            <p>+55 (91) 9 9999-0000</p>
-                        </div>
-                    </div>
+                            <strong>+55 (91) 9 9999-0000</strong>
+                        </span>
+                    </a>
 
-                    <div class="info-item">
-                        <div class="info-icon">📸</div>
-                        <div class="info-text">
+                    <a class="info-item" href="https://instagram.com/principiacademy" target="_blank" rel="noopener">
+                        <span class="info-icon" aria-hidden="true">📸</span>
+                        <span class="info-text">
                             <span>Instagram</span>
-                            <p>@principiacademy</p>
-                        </div>
-                    </div>
+                            <strong>@principiacademy</strong>
+                        </span>
+                    </a>
 
                     <div class="info-card">
                         <h4>Horário de atendimento</h4>
-                        <p>Segunda a Sexta: 8h às 20h</p>
+                        <p>Segunda a sexta: 8h às 20h</p>
                         <p>Sábado: 9h às 14h</p>
-                        <p>Domingo: Somente via WhatsApp</p>
+                        <p>Domingo: somente via WhatsApp</p>
                     </div>
 
                     <div class="info-card">
-                        <h4>🌐 Aulas 100% Online</h4>
-                        <p>Estude de qualquer lugar do Brasil com a mesma qualidade.<br>Nossa plataforma funciona em
+                        <h4>🌐 Aulas 100% online</h4>
+                        <p>Estude de qualquer lugar do Brasil com a mesma qualidade. Nossa plataforma funciona em
                             computador, tablet e celular.</p>
                     </div>
                 </div>
@@ -352,15 +374,15 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <div class="logo-icon-small">🍎</div>
-                    <div class="logo-text-footer">Principia <span>Academy</span></div>
+                    <span class="logo-icon-small" aria-hidden="true">🍎</span>
+                    <span class="logo-text-footer">Principia <span>Academy</span></span>
                 </div>
                 <p class="brand-description">Ensino online de Física e Matemática para reforço escolar e preparação para
                     o ENEM e vestibulares.</p>
             </div>
 
-            <div class="footer-nav">
-                <h4>NAVEGAÇÃO</h4>
+            <nav class="footer-nav" aria-label="Navegação do rodapé">
+                <h4>Navegação</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#cursos">Cursos</a></li>
@@ -368,10 +390,10 @@
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-            </div>
+            </nav>
 
             <div class="footer-nav">
-                <h4>CURSOS</h4>
+                <h4>Cursos</h4>
                 <ul>
                     <li><a href="#cursos">Reforço Fundamental</a></li>
                     <li><a href="#cursos">Reforço Ensino Médio</a></li>
@@ -381,69 +403,36 @@
             </div>
 
             <div class="footer-social">
-                <h4>REDES SOCIAIS</h4>
+                <h4>Redes sociais</h4>
                 <div class="social-links">
-                    <div class="social-item">
-                        <i data-lucide="camera"></i>
-                        <div class="social-text">
-                            <span>Instagram</span>
-                            <p>@principiacademy</p>
-                        </div>
-                    </div>
-                    <div class="social-item">
-                        <i data-lucide="play"></i>
-                        <div class="social-text">
-                            <span>YouTube</span>
-                            <p>@principiacademy</p>
-                        </div>
-                    </div>
-                    <div class="social-item">
+                    <a class="social-item" href="https://instagram.com/principiacademy" target="_blank" rel="noopener">
+                        <i data-lucide="instagram"></i>
+                        <span class="social-text"><span>Instagram</span><strong>@principiacademy</strong></span>
+                    </a>
+                    <a class="social-item" href="https://youtube.com/@principiacademy" target="_blank" rel="noopener">
+                        <i data-lucide="youtube"></i>
+                        <span class="social-text"><span>YouTube</span><strong>@principiacademy</strong></span>
+                    </a>
+                    <a class="social-item" href="https://wa.me/5591999999999" target="_blank" rel="noopener">
                         <i data-lucide="message-circle"></i>
-                        <div class="social-text">
-                            <span>WhatsApp</span>
-                            <p>+55 91 99999-0000</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="insta-promo-box">
-                    <p>📸 Siga-nos no Instagram <span>@principiacademy</span> para dicas de Física e Matemática e
-                        novidades dos cursos.</p>
+                        <span class="social-text"><span>WhatsApp</span><strong>+55 91 99999-0000</strong></span>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p>© 2026 Principia Academy. Todos os direitos reservados.</p>
-                <div class="footer-tags">
-                    <span>Física • Matemática • Reforço Escolar • ENEM • Vestibular • Mentoria Individual</span>
-                </div>
+                <p>© <span id="ano">2026</span> Principia Academy. Todos os direitos reservados.</p>
+                <p class="footer-tags">Física • Matemática • Reforço Escolar • ENEM • Vestibular • Mentoria Individual</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5591999999999" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5591999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
         <i data-lucide="message-circle"></i>
         <span>WhatsApp</span>
     </a>
-
-    <script>lucide.createIcons();</script>
-    <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        lucide.createIcons();
-    </script>
-</body>
-
-</html>
 </body>
 
 </html>
